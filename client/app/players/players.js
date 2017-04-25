@@ -4,7 +4,7 @@ angular.module('app.players', [])
 
 	$scope.data = {};
 
-	var showPlayers = function() {
+	$scope.showPlayers = function() {
 		Players.getAllPlayers()
 		.then(function(players) {
 			$scope.searchResults = undefined;
@@ -14,15 +14,17 @@ angular.module('app.players', [])
 			console.log(error);
 		});
 	};
-	showPlayers();
+	$scope.showPlayers();
 
 	$scope.searchPlayer = function() {
+		$scope.player = $scope.search;
+		
 		var name = $scope.player.replace(/ /g, '%20');
 
 		Players.searchPlayerCrimes(name)
 		.then(function(player) {
 			$scope.searchResults = player;
-			$scope.player = "";
+			$scope.search = "";
 		})
 		.catch(function(err) {
 			console.log(error);

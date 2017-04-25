@@ -21,7 +21,7 @@
       </ul>
       <form class="navbar-form navbar-left">
         <div class="form-group">
-          <input type="text" class="form-control" placeholder="Search">
+          <input type="text" class="form-control" placeholder="Filter Crimes" ng-model="search">
         </div>
         <button type="submit" class="btn btn-default">Submit</button>
       </form>
@@ -30,7 +30,7 @@
   </div><!-- /.container-fluid -->
 </nav>
   <h4>Top Crimes</h4>
-	<div ng-repeat="crime in data.crimes">
+	<div ng-repeat="crime in data.crimes | filter: search">
 		{{ crime.Category }} :
     {{  crime.arrest_count }}
 	</div>
