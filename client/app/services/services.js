@@ -27,7 +27,20 @@ angular.module('app.services', [])
 			return resp.data;
 		});
 	};
-	return {
-		getAllPlayers: getAllPlayers
+
+	var searchPlayerTotalArrests = function() {
+		
+		return $http({
+			
+		})
 	};
-})
+
+	var searchPlayerCrimes = function() {
+
+	}
+	return {
+		getAllPlayers: getAllPlayers,
+		searchPlayerTotalArrests: searchPlayerTotalArrests,
+		searchPlayerCrimes: searchPlayerCrimes
+	};
+});

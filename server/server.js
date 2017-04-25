@@ -6,8 +6,6 @@ var promise = require('bluebird');
 var request = require('request');
 //var morgan = require('morgan');
 
-
-//var app = require('./server-config.js');
 var app = express();
 
 var port = process.env.PORT || 5000;
@@ -33,7 +31,12 @@ app.get('/api/crimes', function(req, res, next){
 });
 
 app.post('/api/crimes', function(req, res, next){
+	var crime = req.body.crime;
 
+	
+	request({
+		uri: ''
+	}).pipe(res)
 });
 
 app.get('/api/players', function(req, res, next){
