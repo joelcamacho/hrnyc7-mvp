@@ -1,0 +1,17 @@
+<div ng-controller="CrimesController">
+	<nav>
+		<ul>
+      		<li>
+          		<a href="#/crimes">Crimes</a>
+      		</li>
+       		<li>
+          		<a href="#/players">Players</a>
+      		</li>
+    	</ul>
+	</nav>
+  <div>Top Crimes</div>
+	<div ng-repeat="crime in data.crimes">
+		{{ crime.Category }} :
+    {{  crime.arrest_count }}
+	</div>
+</div>

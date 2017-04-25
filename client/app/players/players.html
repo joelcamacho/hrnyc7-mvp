@@ -1,0 +1,20 @@
+<div ng-controller="PlayersController">
+	<nav>
+		<ul>
+      		<li>
+          		<a href="#/crimes">Crimes</a>
+      		</li>
+       		<li>
+          		<a href="#/players">Players</a>
+      		</li>
+    	</ul>
+	</nav>
+  <div>All-Criminal Team:</div>
+	<div ng-repeat="player in data.players">
+		{{ player.Name }} :
+    {{  player.Team }}
+    {{ player.Team_name }}
+    {{ player.Position }}
+    {{ player.arrest_count }}
+	</div>
+</div>

@@ -20,7 +20,6 @@
   },
   "homepage": "https://github.com/joelcamacho/hrnyc7-mvp#readme",
   "dependencies": {
-    "angular": "^1.6.4",
     "bluebird": "^3.5.0",
     "body-parser": "^1.17.1",
     "cookie-parser": "^1.4.3",
