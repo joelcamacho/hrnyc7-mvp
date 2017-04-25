@@ -28,19 +28,22 @@ angular.module('app.services', [])
 		});
 	};
 
-	var searchPlayerTotalArrests = function() {
-		
+	var searchPlayerCrimes = function(name) {
+
 		return $http({
-			
+			method: 'POST',
+			url: '/api/players',
+			data: {
+				player : name
+			}
 		})
+		.then(function(resp) {
+			return resp.data;
+		});
 	};
 
-	var searchPlayerCrimes = function() {
-
-	}
 	return {
 		getAllPlayers: getAllPlayers,
-		searchPlayerTotalArrests: searchPlayerTotalArrests,
 		searchPlayerCrimes: searchPlayerCrimes
 	};
 });
